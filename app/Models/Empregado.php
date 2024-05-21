@@ -9,10 +9,17 @@ class Empregado extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'email', 'cpf', 'idade', 'departamento_id'];
+    protected $fillable = [
+        'nome',
+        'email',
+        'cpf',
+        'idade',
+        'departamento_id'
+    ];
 
-    public function departmento()
+    public function departamento()
     {
-        return $this->belongsTo(Departmento::class);
+        return $this->belongsTo(Departamento::class);
     }
 }
+
